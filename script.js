@@ -53,8 +53,8 @@ function checkWin(){
     for(let i = 0; i < winConditions; i++){
         //Get the innerHTML (marks) from the 3 boxes in the current winning condition
         let v0 = boxes[winConditions[i][0]].innerHTML;
-        let v1 = boxes[winConditions[i][j]].innerHTML;
-        let v2 = boxes[winConditions[i][j]].innerHTML;
+        let v1 = boxes[winConditions[i][1]].innerHTML;
+        let v2 = boxes[winConditions[i][2]].innerHTML;
 
         //Checks if all the boxes are non-empty and have the same mark
         if (v0 != "" && v0 === v1 && v0 === v2){
