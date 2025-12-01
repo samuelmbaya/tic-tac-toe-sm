@@ -29,10 +29,10 @@ boxes.forEach(e => {
 
 //Function to switch between players X&O and update the background indicator
 function changeTurn(){
-    //If its currently X's turn, switch to O and move the background indicator to the right by 85px
+    //If its currently X's turn, switch to O and move the background indicator to the right by 150px
     if(turn === "X"){
         turn = "O";
-        document.querySelector(".bg").style.left = "85px";
+        document.querySelector(".bg").style.left = "150px";
     }
     //Otherwise, switch back to X and move the background indicator to the left 0px
     else{
@@ -60,8 +60,10 @@ function checkWin(){
         if (v0 != "" && v0 === v1 && v0 === v2){
             //Set game over flag to true
             isGameOver = true;
-            //Display the winning message with the current players mark
-            document.querySelector("#results").innerHTML = turn + " win";
+            //Get the winner's name based on the current turn
+            let winnerName = (turn === "X" ? document.getElementById("p1-name").innerText : document.getElementById("p2-name").innerText);
+            //Display the winning message with the winner's name
+            document.querySelector("#results").innerHTML = winnerName + " wins";
             //Show the "Play Again" button
             document.querySelector("#play-again").style.display = "inline";
 

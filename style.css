@@ -28,36 +28,33 @@ body{
 }
 
 .turn-container{
-    width: 170px;
+    width: 250px;
     height: 80px;
     margin: 0 0 20px 0;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 100px 50px 100px;
+    grid-template-rows: 1fr;
     position: relative;
 }
 
-.turn-container h3{
-    margin: 0;
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-
-.turn-container .turn-box{
-    border: 3px solid white;
+.turn-container .player-name{
     font-size: 1.6rem;
     font-weight: 700;
+    text-decoration: underline;
+    cursor: text;
+    user-select: text;
 }
 
-.turn-container .turn-box:nth-child(even){
-    border-right: none;
+.turn-container .vs{
+    font-size: 1.6rem;
+    font-weight: 700;
 }
 
 .bg{
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 85px;
+    width: 100px;
     height: 40px;
     background-color: #FF2E63;
     z-index: -1;
