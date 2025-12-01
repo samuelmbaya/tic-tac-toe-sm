@@ -29,10 +29,10 @@ boxes.forEach(e => {
 
 //Function to switch between players X&O and update the background indicator
 function changeTurn(){
-    //If its currently X's turn, switch to O and move the background indicator to the right by 150px
+    //If its currently X's turn, switch to O and move the background indicator to the right by 280px
     if(turn === "X"){
         turn = "O";
-        document.querySelector(".bg").style.left = "150px";
+        document.querySelector(".bg").style.left = "280px";
     }
     //Otherwise, switch back to X and move the background indicator to the left 0px
     else{
